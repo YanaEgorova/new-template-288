@@ -158,7 +158,7 @@ body.error-active .error__overlay {
 .title {
   text-transform: uppercase;
   font-size: 4rem;
-  font-family: var(--main-title-font);
+  font-family: var(--title-font);
 }
 .sub-title {
   font-size: 3rem;
@@ -177,21 +177,60 @@ body.error-active .error__overlay {
 }
 .btn {
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0 auto;
   position: relative;
   text-decoration: none;
   width: fit-content;
-  padding: 1.6rem 3rem;
+  padding: 2rem 3.5rem;
   letter-spacing: 0.1rem;
   display: block;
   text-transform: uppercase;
-  font-family: var(--main-title-font);
-  border: 0.2rem solid var(--second-brand-color);
-  background-color: var(--second-brand-color);
+  font-family: var(--title-font);
+  border: none;
+  background-image: linear-gradient(to right, var(--third-brand-color), var(--second-brand-color));
   color: var(--sub-text-color);
   transition: all 0.3s ease-in-out;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+}
+.transparent-btn span {
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  text-decoration: none;
+  width: fit-content;
+  padding: 2rem 3.5rem;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: var(--title-font);
+  background-image: linear-gradient(to right bottom, var(--main-bg-color), var(--fifth-brand-color));
+  color: var(--third-brand-color);
+  transition: all 0.3s ease-in-out;
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--main-bg-color);
+}
+.transparent-btn {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  display: block;
+}
+.transparent-btn::before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: calc(100% + 1rem);
+  height: calc(100% + 1rem);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 0.1rem solid var(--main-bg-color);
+  border-radius: 0.5rem;
+}
+.transparent-btn:hover span {
+  transform: scale(1.1);
 }
 
 .bold {
